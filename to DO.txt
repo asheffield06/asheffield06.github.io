@@ -1,0 +1,9 @@
+to do list 
+
+- make SOYL trailer
+- fish game
+-frogger
+-procedural
+-pillow - talk about how code comments suck
+
+-write about ewxpiernce in AR VR and unreal
