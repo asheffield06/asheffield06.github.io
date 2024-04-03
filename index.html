@@ -356,6 +356,7 @@
                                                         just primitive shapes in unity to alleviate pressure on our teams designers)
                                                         <br> &bull; Multiple weapons
                                                         <br> &bull; Multiple powerups
+                                                        <br> &bull; Steam integration
 
                                                         <br><br> I could talk about this game and its development at length and I am so proud of how it turned out, having the game on steam and also presenting at Insomnia. Bellow is a link to our youtube channel which has clips of the
                                                         game at various points in its development, so you can see how far its come.
@@ -580,14 +581,69 @@
                                                         procedurally generated enviroment, that has a randomly generated pool of fish. I have lots of ideas for this game that I plan to slowly implement.<br><br>
 
                                                         I decided to draw a fish every single day for 147 days. I am a programmer so pixel art isn't where my ambitions and interests lay, but I decided to do a fish every single day without fail, to demonstrate some discipline and to
-                                                        make a good foundation for the game, so that I can now really sink my teeth into the code. This project is far from over but I will demonstrate what I have worked on so far.'
+                                                        make a good foundation for the game, so that I can now really sink my teeth into the code. As well as this, I have hand drawn every single element in this game, everything being used is pixel art created by me. This project is far from over but I will demonstrate what I have worked on so far.
                                                     </p>
                                                     <h4><p style="color:white ; font-size: 32px; text-align:left">______________________________________________________________________</h4>
 
 
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="left-text">
+                                                    <h4><p style="color:white ; font-size: 26px;"><br>MAP GENERATION</h4>
+                                                    <p style="color:white ; font-size: 20px; text-align:left">
+                                                        I've worked on multiple procedural generators in the past, some of which are on this portfolio, but this one posed a challenge to me as initially, I didnt know how to get the generation to work with tiles in unity. After many hours of research, 
+                                                        I managed to put together this, which as of currently can produce a land scape with pools and lakes that have banks of sand around them.<br><br>
+                                                        
+                                                        To do this, I have a script that loops through a initially blank terrain, and from each tile it randomly decides
+                                                        where clumps of sand will be placed. These clumps of sand randomly expand, and then water is generated next inside of the clumps of sand. Each layer is put on their own tile map to keep things separate, but there is also a over arching tile map, which
+                                                        pastes over itself, which is used later as a refrence for the tile rules, that make the terrain seemlessly transition together. The next step of the generation is to generate the ocean around the island, and then make a beach as well with a random length.
+                                                        Finally, the vegetation is spawned in randomly in viable locations, and the vegetation is sorted into nessasary layers to interact with the player.<br><br>
 
+                                                        As of now, I am happy with the generation, but in the future I plan to make it much more efficent, as currently it loops through code for too long which makes generation time longer than optimal. Also I want to add rivers and larger lakes that will make the enviroment more unique 
+                                                        and offer more locations to fish. I may even add buildings depending on how I think the game feels. As well as all this, there needs to be some more checks to make sure there is no weird generation, that you may be able to pick up on by looking at the maps generated. But for the short term
+                                                        I am happy with the generation.
+
+                                                    </p>
+
+                                                    <div class="right-image">
+                                                        <br><img src="gifs/charactercontroller.gif" alt="">
+                                                    </div>
+
+                                                    <h4><p style="color:white ; font-size: 26px;"><br>FISHING</h4>
+                                                    <p style="color:white ; font-size: 20px; text-align:left">
+                                                        fishing exists in the fishing game
+
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="right-text">
+                                                    <div class="right-image">
+                                                        <br><br><img src="gifs/mapgeneration.gif" alt="">
+                                                    </div>
+
+                                                    <h4><p style="color:white ; font-size: 26px;"><br>PLAYER AND ENVIROMENT</h4>
+                                                    <p style="color:white ; font-size: 20px; text-align:left">
+                                                        The first challenge of making the player controller was drawing a sprite and a animation frame for every direction the player can move into. From there I made a script for the player controller that takes key inputs and moves the player in the direction requested using a coroutine to lerp the
+                                                        players position, and refers to the animation controller to play the relevant animation.<br><br>
+
+                                                        The player checks if the tile is is moving into is a accessable tile by casting a small 2D physics overlap circle and checking what layer the tile that the circle hits is in. There are different layers for waters and vegetation so that later down the line
+                                                        I can make unique interactions such as fishing with the relevant tiles. I also made tile rules with animations for the various tiles around the player, so that animations can be played and seemless transitions between enviroments can take place, to make a better visual experience. currently
+                                                        some of the tile rules need modifying, as certain cases are not being accounted for.
+                                                    </p>
+
+                                                    <div class="right-image">
+                                                        <br><br><img src="gifs/fishing.gif" alt="">
+                                                    </div>
+
+                                                    <h4><p style="color:white ; font-size: 26px;"><br>FISH SCRIPTABLE OBJECT</h4>
+
+
+                                                </div>
+                                            </div>
                                             
                                         </div>
                                     </div>
