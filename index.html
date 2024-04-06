@@ -542,7 +542,7 @@
                                                     <p style="color:white ; font-size: 20px; text-align:left">
                                                         As this project was only a month long game jam a lot of focus was put into well polished and bug free features, as well as having the game look very visually appealing. My major rolls on the team was to do with the grid system, player movement, planting and harvesting. I didnt have much of a roll 
                                                         in the AIs code although helped to tie the AIs to the grid system and also gave some minor support to the AI programmers. Some other things I worked on include:
-                                                        <br> &bull; FUnctionality of the games UI 
+                                                        <br> &bull; Functionality of the games UI 
                                                         <br> &bull; Implementation of sound effects and music into all aspects of the game
                                                         <br> &bull; creation of particle systems for attacks, and spawning for both enemies and allies
                                                         <br> &bull; The death loop for everything in the game. (inlcuidng creating the death animation pixel art sprites)
@@ -612,7 +612,12 @@
 
                                                     <h4><p style="color:white ; font-size: 26px;"><br>FISHING</h4>
                                                     <p style="color:white ; font-size: 20px; text-align:left">
-                                                        fishing exists in the fishing game
+                                                        The fishing loop is currently early on in development as I realised it would be better to create the fish scriptable object first, but for now I have made a sort of basic version of what I hope it looks like. The idea is that initially there is a casting phase, and a power slider for
+                                                        how well the cast is, this will translate into the likely hood of catching a fish. From there if a fish is on the line, there is the rhythm game based phase, which will be where the player needs to hit every note on time to be able to catch the fish. The rhythms will be faster and harder based off of
+                                                        the rarity of the fish. Then the player will catch the fish and some information about the fish will pop up.<br><br>
+
+                                                        Currently, a lot of the initial code is in place, like the power slider code which is fully functional and returns a value back to the player controller. The rhythm game currently only ever spawns a set prefab of the rhythm, but in the future I want to make it randomly generated. As well as this the rhythm, game 
+                                                        currently has no tie in to the rarity of the fish, because i transitioned from development of fishing, to the fish code.
 
                                                     </p>
 
@@ -636,7 +641,7 @@
                                                     </p>
 
                                                     <div class="right-image">
-                                                        <br><br><img src="gifs/fishing.gif" alt="">
+                                                        <br><br><br><img src="gifs/fishing.gif" alt="">
                                                     </div>
 
                                                     <h4><p style="color:white ; font-size: 26px;"><br>FISH SCRIPTABLE OBJECT</h4>
